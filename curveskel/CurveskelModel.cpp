@@ -50,5 +50,7 @@ Vertex CurveskelTypes::CurveskelModel::other_vertex( Edge e, Vertex v )
     return (v == this->vertex(e, 0)) ? this->vertex(e, 1) : this->vertex(e, 0);
 }
 
-// Explicit Template Instantiation
-template class WingedgeMesh <double, CurveskelTypes::SkelVector<double,3> >;
+namespace CurveskelTypes {
+    // Explicit Template Instantiation
+    template class WingedgeMesh <double, CurveskelTypes::SkelVector<double,3> >;
+}

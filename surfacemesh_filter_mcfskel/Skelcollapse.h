@@ -125,10 +125,19 @@ public:
 
     void algorithm_iteration(){  
         logme("----------- ITERATION ----------");
-        tic("Geometry Contraction"); contractGeometry();   toc();
-        tic("Constraints Update");   updateConstraints();  toc();
-        tic("Update Topology");      updateTopology();     toc();        
-        tic("Detect Degeneracies");  detectDegeneracies(); toc();
+//        tic("Geometry Contraction");
+        contractGeometry();
+//        toc();
+//
+//        tic("Constraints Update");
+        updateConstraints();
+//        toc();
+//        tic("Update Topology");
+        updateTopology();
+//	toc();        
+//        tic("Detect Degeneracies");
+        detectDegeneracies();
+//        toc();
 
         /// Highlight fixed vertices
         foreach(Vertex v, mesh()->vertices()){
